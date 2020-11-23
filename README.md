@@ -1,0 +1,7 @@
+# SCEPTRE_pipeline
+The SCEPTRE_pipeline is an image processing and analysis pipeline used for the epigenetic profiling method SCEPTRE (Single Cell Evaluation of Post-TRanslational Epigenetic Encoding). These scripts were created and used with MATLAB R2018a. Taking as input an image stack of immunofluorescence and/or DNA FISH labeled structures within the nucleus of a cell, sceptre_processing First generates a nuclear mask within the image stack (either with an additional nuclear stain provided within the image or with one of the provided immunofluorescence channels) and then segments the immunofluorescence clusters (e.g. Histone post-translational modifications) or the DNA FISH cluster (e.g. GAPDH alleles) within the nucleus. 
+Once the image stack, or group of image stacks have been processed and the information is stored as a structure r, sceptre_analysis (or sceptre_analysis3 in the case of three DNA FISH labeled genes and one immunofluorescence channel) generates a set of figures to analyze the fluorescence signal within each cluster, the relationship signals have between alleles of the same gene in the same cell, or between cluster sets from different channels.
+
+The analysis scripts use violin plots (using violinplot available at https://github.com/bastibe/Violinplot-Matlab) as the main form of comparing fluorescence signal distributions.
+
+For more info on SCEPTRE, check out the biorxiv submission of the paper at: https://www.biorxiv.org/content/10.1101/2020.11.17.385476v1?rss=1
